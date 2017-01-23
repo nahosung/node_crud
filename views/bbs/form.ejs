@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+<h1><%= title %></h1>
+<form name="bbsform" id="bbsform" method="post" action="/users/insert">
+<table border="1px">
+  <tr>
+    <th>제목</th>
+    <td>
+      <input type="text" name="bbs_title" value="" placeholder="제목" />
+    </td>
+  </tr>
+  <tr>
+    <th>작성자</th>
+    <td>
+      <input type="text" name="bbs_user" value="" placeholder="작성자"/>
+    </td>
+  </tr>
+  <tr>
+    <th>내용</th>
+    <td>
+      <textarea name="bbs_content"> </textarea>
+    </td>
+  </tr>
+  <input type="submit" value="글 작성"/>
+</table>
+</form>
+</body>
+</html>

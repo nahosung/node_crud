@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+<h1><%= title %></h1>
+<form name="bbsform" id="bbsform" method="post" action="/users/update">
+<input type="hidden" name="bbs_id" value="<%= rows[0].BBS_ID %>"/>
+<table border="1px">
+  <tr>
+    <th>제목</th>
+    <td>
+      <input type="text" name="bbs_title" value="<%= rows[0].BBS_TITLE %>"/>
+    </td>
+  </tr>
+  <tr>
+    <th>작성자</th>
+    <td>
+      <input type="text" name="bbs_user" value="<%= rows[0].BBS_USER %>"/>
+    </td>
+  </tr>
+  <tr>
+    <th>내용</th>
+    <td>
+      <textarea name="bbs_content" ><%= rows[0].BBS_CONTENT %></textarea>
+    </td>
+  </tr>
+  <tr>
+    <th>날짜</th>
+    <td>
+      <%= rows[0].BBS_DATE %>
+    </td>
+  </tr>
+  <input type="submit" value="글 수정"/>
+</table>
+</form>
+</body>
+</html>

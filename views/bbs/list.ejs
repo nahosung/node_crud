@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+<h1><%= title %></h1>
+<table border="1px">
+  <tr>
+    <th>제목</th>
+    <th>작성자</th>
+    <th>날짜</th>
+  </tr>
+  <%
+    for(var i=0; i<rows.length; i++){
+  %>
+  <tr>
+    <td><%= rows[i].BBS_TITLE %></td>
+    <td><%= rows[i].BBS_USER %></td>
+    <td><%= rows[i].BBS_DATE %></td>
+    <td>
+      <a href="/users/detail/<%= rows[i].BBS_ID %>">수정</a>
+      <a href="/users/delete/<%= rows[i].BBS_ID %>">삭제</a>
+    </td>
+  </tr>
+  <%
+    }
+  %>
+  <a href="./form"> 글 작성</a>
+</table>
+</body>
+</html>
