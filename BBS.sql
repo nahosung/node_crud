@@ -4,7 +4,7 @@ CREATE TABLE `BBS` (
 	`BBS_TITLE`   VARCHAR(200) NULL     COMMENT '力格', -- 力格
 	`BBS_USER`    VARCHAR(20)  NULL     COMMENT '累己磊', -- 累己磊
 	`BBS_CONTENT` LONGTEXT     NULL     COMMENT '郴侩', -- 郴侩
-	`BBS_DATE`    DATE         NULL     COMMENT '累己老', -- 累己老
+	`BBS_DATE`    DATE         NULL     COMMENT '累己老' -- 累己老
 )
 COMMENT '霸矫魄';
 

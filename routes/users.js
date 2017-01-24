@@ -35,7 +35,7 @@ router.post('/insert', function (req, res, next) {
       var data = [ req.body.bbs_title,
                   req.body.bbs_user,
                   req.body.bbs_content ];
-        var sql ='INSERT INTO bbs (BBS_TITLE, BBS_USER, BBS_CONTENT, BBS_DATE, BBS_COUNT) VALUES(?,?,?,SYSDATE(),0)';
+        var sql ='INSERT INTO bbs (BBS_TITLE, BBS_USER, BBS_CONTENT, BBS_DATE) VALUES(?,?,?,SYSDATE())';
         connection.query(sql, data, function (err, rows) {
             if (err) console.error("err : " + err);
 
